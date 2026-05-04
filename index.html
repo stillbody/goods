@@ -5,16 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>stillbody</title>
     <style>
-        body {
-            background-color: #000000; /* 真っ黒 */
-            color: #ffffff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+       body {
+    /* 1. フォント指定：日本語も英語も「細身のサンセリフ」に統一 */
+    font-family: "Inter", "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    
+    /* 2. ウェイト：とにかく細く（プロのデザインはここが肝） */
+    font-weight: 200;
+    
+    /* 3. カーニング：10%〜20%ほど広げて「余白」を文字の中にも作る */
+    letter-spacing: 0.15em;
+    
+    /* 4. アンチエイリアス：フォントをよりシャープに見せる（デザイナー必須） */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+/* リンク（mat / cushion）の装飾 */
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #FFFFFF;
+    border-bottom: 0.5px solid #333333; /* 1pxだと太いので0.5pxや薄いグレーで */
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
         /* 上部の一言 */
         header {
             margin-top: 15vh; /* 画面上部から15%の余白 */
